@@ -2,9 +2,9 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Product from "./components/product";
-import Cart from "./components/cartart";
-import Login from "./components/loginogin";
+import Product from "./components/Product";
+import Cart from "./components/Cart";
+import Login from "./components/Login";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
