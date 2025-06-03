@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  background-color: #dbe7f0;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #0077cc;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+nav a {
+  color: #0077cc;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: auto;
+  font-size: 14px;
+  color: #333;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.form-container {
+  border: 1px solid #0077cc;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 30px 25px;
+  width: 320px;
+  box-shadow: 0 0 15px rgba(0, 119, 204, 0.2);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 0 25px rgba(0, 119, 204, 0.35);
+}
+
+.form-title {
+  color: #0077cc;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1.5px solid #0077cc;
+  border-radius: 8px;
+  background-color: #f9faff;
+  color: #333;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #005fa3;
+  outline: none;
+  background-color: #eaf4fb;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0077cc;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+  box-shadow: 0 0 10px rgba(0, 95, 163, 0.5);
+}
+
+.form-container h2,
+.form-container p {
+  color: #0077cc;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
