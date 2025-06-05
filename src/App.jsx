@@ -17,7 +17,6 @@ export const AppContext = createContext();
 function App() {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState(null);
-  const [cart, setCart] = useState([]);
 
   return (
     <AppContext.Provider value={{ users, setUsers, user, setUser }}>
