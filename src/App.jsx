@@ -3,10 +3,10 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Cart from "./components/cart";
+import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Login from "./components/login";
+import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Product from "./components/Product";
 import Register from "./components/Register";
