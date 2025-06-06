@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../App";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
+import "./Product.css"; 
 
 export default function Cart() {
   const { cart, setCart, user } = useContext(AppContext);
@@ -43,7 +44,7 @@ export default function Cart() {
       <h3 className="form-title">Your Cart</h3>
 
       {cart.length === 0 ? (
-        <p style={{ color: "#d86c7a" }}>Your cart is empty </p>
+        <p style={{ color: "#d86c7a" }}>Your cart is empty 😊</p>
       ) : (
         <>
           <div className="product-grid">
