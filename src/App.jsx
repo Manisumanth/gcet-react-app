@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-
+import Cart from "./components/Cart";
 import Logout from "./components/Logout";
 import Product from "./components/Product";
 import Register from "./components/Register";
