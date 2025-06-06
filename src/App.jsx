@@ -11,6 +11,7 @@ import Logout from "./components/Logout";
 import Product from "./components/Product";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import Orders from "./components/Orders";
 
 
 export const AppContext = createContext();
@@ -27,8 +28,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/orders" element={<Orders />} />
           </Routes>
         </main>
 
