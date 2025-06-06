@@ -1,21 +1,16 @@
-import React, { useEffect, useContext } from "react";
-import { AppContext } from "../App";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import '../App.css';
-
+import { AppContext } from "../App";
 
 export default function Logout() {
   const { setUser } = useContext(AppContext);
   const navigate = useNavigate();
 
   useEffect(() => {
-    setUser({});
+    setUser(null);
+    localStorage.removeItem("user");
     navigate("/login");
-  }, [setUser, navigate]);
+  }, []);
 
-  return (
-    <div className="form-container">
-      <h3 className="form-title">Logging out...</h3>
-    </div>
-  );
+  return null;
 }

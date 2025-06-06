@@ -14,7 +14,7 @@ export default function Header() {
         <Link to="/">Home</Link>
         <Link to="/cart">Cart</Link>
        <Link to="/orders">Your Orders</Link>
-        {user.token ? (
+        {user ? (
         <Link to="/logout">Logout</Link>
       ) : (
         <Link to="/login">Login</Link>
