@@ -10,6 +10,7 @@ import Cart from "./components/Cart";
 import Logout from "./components/Logout";
 import Product from "./components/Product";
 import Register from "./components/Register";
+import Login from "./components/Login";
 
 
 export const AppContext = createContext();
