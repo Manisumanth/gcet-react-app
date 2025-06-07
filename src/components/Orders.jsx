@@ -1,24 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
-import { useNavigate } from "react-router-dom";
 import "../App.css";
-import "./Product.css"; 
+import "./Product.css";
 
 export default function Orders() {
   const { user } = useContext(AppContext);
-  const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     if (!user) {
-      navigate("/login");
+      setOrders([]);
       return;
     }
-
     const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
     const userOrders = savedOrders.filter(order => order.userId === user.email);
     setOrders(userOrders);
-  }, [user, navigate]);
+  }, [user]);
 
   const totalOrderValue = orders.reduce((sum, order) => sum + order.total, 0);
 
@@ -27,7 +24,9 @@ export default function Orders() {
       <h3 className="form-title">My Orders</h3>
 
       {orders.length === 0 ? (
-        <p style={{ color: "#d86c7a" }}>No orders placed yet.</p>
+        <p style={{ color: "#d86c7a" }}>
+          {user ? "No orders placed yet." : "You have not ordered anything yet."}
+        </p>
       ) : (
         <>
           <div className="product-grid">

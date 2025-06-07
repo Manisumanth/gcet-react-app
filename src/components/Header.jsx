@@ -5,7 +5,6 @@ import '../App.css';
 
 export default function Header() {
   const { user } = useContext(AppContext);
-  // const isLoggedIn = user?.email && user?.token;
 
   return (
     <header>
@@ -13,12 +12,12 @@ export default function Header() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/cart">Cart</Link>
-       <Link to="/orders">Your Orders</Link>
+        <Link to="/orders">Your Orders</Link>
         {user ? (
-        <Link to="/logout">Logout</Link>
-      ) : (
-        <Link to="/login">Login</Link>
-      )}
+          <Link to="/logout">Logout</Link>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
       </nav>
     </header>
   );

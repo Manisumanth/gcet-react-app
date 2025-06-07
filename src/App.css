@@ -1,162 +1,217 @@
-/* === App.css (Updated for Professional Watch Shopping Site) === */
+/* App.css - Professional Watch Store Styling */
+
+/* Reset and base */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f4f6f8;
+  background-color: #f5f7fa;
   color: #222;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header,
-footer {
-  background-color: #ffffff;
-  padding: 20px 40px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-header h1 {
-  color: #2c3e50;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  color: #0077cc;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #005fa3;
-  text-decoration: underline;
-}
-
-footer {
-  margin-top: auto;
-  font-size: 14px;
-  color: #666;
-}
-
-.main-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 50px 20px;
-  background-color: #f4f6f8;
-}
-
-.form-container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-  width: 100%;
-  max-width: 800px;
-  text-align: center;
-}
-
-.form-title {
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-input {
-  width: 100%;
-  padding: 12px 14px;
-  margin-bottom: 15px;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-  background-color: #fefefe;
-  font-size: 15px;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-input:focus {
-  border-color: #0077cc;
-  outline: none;
-  background-color: #eaf4fb;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0077cc;
-  color: white;
+  line-height: 1.6;
   font-size: 16px;
-  border: none;
+}
+
+/* Container for forms and pages */
+.form-container {
+  max-width: 700px;
+  background: #fff;
+  margin: 40px auto;
+  padding: 25px 30px;
   border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form titles */
+.form-title {
+  font-size: 2rem;
+  color: #001F3F;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* Headings inside cards and product lists */
+h4, h5 {
+  color: #001F3F;
+  margin-bottom: 10px;
+}
+
+/* Paragraph text */
+p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Buttons */
+button {
+  background-color: #001F3F;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #005fa3;
-  box-shadow: 0 4px 10px rgba(0, 95, 163, 0.4);
+  background-color: #004080;
 }
 
+/* Secondary buttons */
+button.secondary {
+  background-color: #39CCCC;
+}
+
+button.secondary:hover {
+  background-color: #007b7b;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #001F3F;
+  outline: none;
+}
+
+/* Header styling */
+header {
+  background-color: #001F3F;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #7FDBFF;
+  margin-left: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #39CCCC;
+}
+
+/* Product grid and cards */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
   margin-top: 20px;
 }
 
 .product-card {
-  border: 1px solid #ddd;
+  background: #fff;
   border-radius: 10px;
-  padding: 15px;
-  background-color: #fff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.product-card h4,
-.product-card p,
-.product-card h5 {
+.product-card h4 {
+  font-weight: 700;
   margin-bottom: 10px;
-  color: #2c3e50;
+}
+
+.product-card h5 {
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.product-card p {
+  font-size: 1.1rem;
+  color: #001F3F;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Cart quantity controls */
+.product-card div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .product-card button {
-  background-color: #0077cc;
-  color: #fff;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.product-card button:hover {
-  background-color: #005fa3;
-}
-
-ul {
-  margin: 0;
+  width: 35px;
+  height: 35px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  border-radius: 50%;
   padding: 0;
-  list-style-type: none;
+}
+
+/* Cart totals */
+h4[style] {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 30px;
+  color: #d86c7a;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-container {
+    margin: 20px 15px;
+    padding: 20px 15px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 10px 15px 0 0;
+  }
 }
